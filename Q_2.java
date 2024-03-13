@@ -25,7 +25,7 @@ public class Q_2 {
 		Complex sc1 = new Complex();
 		sc1.setdata(-4,5);
 		sc1.display();
-		complex sc2=new complex();
+  Complex sc2=new Complex();
 		Complex sum= new Complex();
 		sum=sum.add(sc1,sc);
 		sum.display();
