@@ -3,36 +3,33 @@ import java.util.Scanner;
 class Person{
 	int age;
 	String name;
-	void hari(String name , int age) {
-		  this.name=name;
-		  this.age=age;
-		  System.out.println("name is "+name+"\nage is"+age);
-		   }
-  void setdata(String name , int age) {
-	  this.name=name;
-	  this.age=age;
-	   }
- void  displaydata() {
-	 System.out.println("name is "+name+"\nage is "+age);
-		 }
+	void setdata(String name , int age) {
+		this.name=name;
+		this.age=age;
+	}
+        void  displaydata() {
+		System.out.println("name is "+name+"\nage is "+age);
+	}
  }
 public class Q_1 {
 	public static void main(String []args) {
+		Person p1=new Person();
+		p1.name="Rohan";
+		p1.age=20;
+		p1.displaydata();
+
 		Scanner sc =new Scanner(System.in);
-		System.out.println("enter the name and age of second person :");
-		Person sc2=new Person();
-		sc2.name=sc.nextLine();
-		sc2.age=sc.nextInt();
-		Person sc1=new Person();
-		sc1.setdata("gopal", 28);
-		sc1.displaydata();
+		System.out.println("Enter the name and age of second person :");
+		Person p2=new Person();
+		p2.setdata("Gopal", 28);
+		p2.displaydata();
 		 
-		if(sc1.age>sc2.age)
-			System.out.println(sc2.name+" is younger");
-		else if(sc1.age<sc2.age)
-			System.out.println(sc1.name+" is younger");
+		if(p1.age>p2.age)
+			System.out.println(p2.name+" is younger");
+		else if(p1.age<p2.age)
+			System.out.println(p1.name+" is younger");
 		else 
-			System.out.println("both has same age");
+			System.out.println("Both have same age");
 	}
 
 }
