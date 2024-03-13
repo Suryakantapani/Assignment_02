@@ -30,10 +30,20 @@ class person{
 public class Q_5 {
 
 	public static void main(String[]args) {
-		person sc=new person("hari",23);
+		person sc=new person("gopal",24);
 		sc.dislay();
-		employee sc1=new employee(3,343222323.23,"gopal",23);
+		employee sc1=new employee(3,10000000.00,"hari",23);
 		sc1.display();
 		 
 	}
 }
+
+output
+-------
+name is gopal
+age is24
+name is hari
+age is 23
+id is 3
+salary is 1.0E7 
+
