@@ -34,3 +34,11 @@ public class Q_03 {
 	}
 
 }
+output
+------
+prodld 12 price 22 quatity 1
+prodld 13 price 23 quatity 2
+prodld 14 price 24 quatity 1
+prodld 15 price 25 quatity 2
+prodld 16 price 22 quatity 1
+net amout 164
