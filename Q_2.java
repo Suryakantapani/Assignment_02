@@ -1,33 +1,35 @@
 package Assignment_02;
-class complex{
-	int real;
-	int imag;
-	void setdata(int x, int y) {
+class Complex{
+	double real;
+	double imag;
+	void setdata(double x, double y) {
 		real=x;
 		imag=y;
 	}
 	void display() {
 		System.out.println("complex number : "+real+"+("+imag+"i) ");
 	}
-	void add(complex x, complex y) {
-	    this.real=x.real+y.real;
-	    this.imag=x.imag+y.imag;
-	    System.out.println("addtion of num is "+this.real+this.imag+"i");
+	public Complex add(complex x, complex y) {
+		Complex c = new Complex();
+	        c.real=x.real+y.real;
+	        c.imag=x.imag+y.imag;
+	        return c;
 	}
 }
 public class Q_2 {
 	public static void main(String []args) {
-		 
-		complex sc=new complex();
+		Complex sc = new Complex();
 		sc.setdata(3,-8);
 		sc.display();
-		complex sc1=new complex();
+		
+		Complex sc1 = new Complex();
 		sc1.setdata(-4,5);
 		sc1.display();
 		complex sc2=new complex();
-		sc2.add(sc1, sc);
+		Complex sum= new Complex();
+		sum=sum.add(sc1,sc);
+		sum.display();
 	}
-
 }
 
 output
