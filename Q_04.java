@@ -1,34 +1,37 @@
 package Assignment_02;
 class Deposit{
-	long p;
+	long principal;
 	int time;
 	double rate;
-	double t_p;
+	double totalAmt;
+	
 	Deposit(){
-		p=100;
+		principal=100;
 		time=1;
 		rate=5.7;	
 	}
-	Deposit(long p,int t, double r){
-		this.p=p;
-		this.time=t;
-		this.rate=r;
+	Deposit(long principal,int time, double rate){
+		this.principal=p;
+		this.time=time;
+		this.rate=rate;
 	}
-	Deposit(long p,int t){
-		this.p=p;
-		this.time=t;
+	Deposit(long principal,int time){
+		this.principal=principal;
+		this.time=time;
 		this.rate=4.5;
 	}
-	Deposit(long p,double r){
-		this.p=p;
+	Deposit(long principal,double rate){
+		this.principal=principal;
 		this.time=4;
-		this.rate=r;
+		this.rate=rate;
 	}
 	void display() {
 		System.out.println("princial "+p+" time "+time+"rate "+rate);
-		t_p=p+(p*time*rate)/100;
-		System.out.println(t_p);
 	}
+	double calcAmt(){
+        totalAmt= principal+(principal*rate*time)/100;
+        System.out.println( totalAmt);
+    }
 }
 
 public class Q_04 {
@@ -39,9 +42,10 @@ public class Q_04 {
 		sc[2]=new Deposit(100,3);
 		sc[3]=new Deposit(100,3.4);
 	
-	for(int i=0; i<4; i++){
-		sc[i].display();
-	}
+	        for(int i=0; i<4; i++){
+			sc[i].display();
+			sc[i].calcAmt();
+		}
 	}
 }
 
