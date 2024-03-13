@@ -44,3 +44,14 @@ public class Q_04 {
 	}
 	}
 }
+
+output
+--------
+princial 100 time 1rate 5.7
+105.7
+princial 100 time 3rate 4.5
+113.5
+princial 100 time 3rate 4.5
+113.5
+princial 100 time 4rate 3.4
+113.6
