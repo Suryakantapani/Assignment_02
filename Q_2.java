@@ -9,7 +9,7 @@ class Complex{
 	void display() {
 		System.out.println("complex number : "+real+"+("+imag+"i) ");
 	}
-	public Complex add(complex x, complex y) {
+	public Complex add(Complex x, Complex y) {
 		Complex c = new Complex();
 	        c.real=x.real+y.real;
 	        c.imag=x.imag+y.imag;
