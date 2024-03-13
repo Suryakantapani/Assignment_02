@@ -29,3 +29,16 @@ public class Q_2 {
 	}
 
 }
+
+output
+---------	
+complex number : 3+(-8i) 
+complex number : -4+(5i) 
+addtion of num is -1-3i
+
+
+
+
+
+
+
