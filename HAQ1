@@ -1,24 +1,49 @@
 
+ import java.util.Scanner;
+class Bank{
+	String Bankname;
+	double amount;
+	static int totalamout=0;
+	void setbankname(String Bankname){
+		this.Bankname=Bankname;
+	
+	}
+	void setamount(double amount)
+	{
+		this.amount=amount;
+		totalamout+=amount;
+	}
+	void show() {
+		System.out.println("bank name is "+Bankname+" net amout of bank is "+amount);
+	}
+}
 
-class Commision{
-    double sales, commission=0;
-    Commision(double sales){
-        this.sales=sales;
-    }
-    public double getCommission(){
-        if (sales<0){
-            System.out.println("Invaslid input: ");
-            return 0;
-        }
-        else if (sales<100){
-            commission+=0.2*sales;
-        }
-        else if (sales<5000) {
-            commission+=0.5*sales;
-        }
-        else {
-            commission+=0.8*sales;
-        }
-        return commission;
-    }
+public class Haq_03 {
+	public static void main(String[]args) 
+	{
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter the bank details ");
+	Bank b[]=new Bank[3];
+	
+	for(int i=0; i<3;i++) 
+	{
+		b[i]=new Bank();
+		b[i].setbankname(sc.next());
+		b[i].setamount(sc.nextDouble());
+		
+	}
+	for(int i=0; i<3; i++) 
+	{
+		
+		b[i].show();
+		
+		
+	}
+	System.out.println(bank.totalamout);
+	
+	
+	
+	}
+	
+
 }
