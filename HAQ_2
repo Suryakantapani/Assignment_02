@@ -1,0 +1,46 @@
+package Assignment_02;
+import java.util.Scanner;
+class Book{
+	String B_name;
+	int edition;
+	int price;
+	Book(String name,int s,int x)
+	{
+		B_name=name;
+		edition=s;
+		price=x;
+	}
+	void display() {
+		System.out.println(B_name+" "+edition+" "+price);
+	}
+}
+public class Haq2 {
+	public static void main(String[]args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the price details ");
+		Book b[]=new Book[5];
+		for(int i=0;i<5;i++)
+		{
+			b[i]=new Book(sc.next(),sc.nextInt(),sc.nextInt());
+			
+		}
+		for(int i=0; i<5; i++) 
+		{
+			 b[i].display();	
+		}
+	    int max=b[0].price;
+		  
+		for(int i=1;i<5; i++) {
+			if(b[i].price>b[0].price) 
+				 max=b[i].price;
+		}
+			System.out.println("maximum price of the book is"+max);
+		
+		
+		
+			
+		}  
+	}
+
+
