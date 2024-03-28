@@ -1,0 +1,24 @@
+
+
+class Commision{
+    double sales, commission=0;
+    Commision(double sales){
+        this.sales=sales;
+    }
+    public double getCommission(){
+        if (sales<0){
+            System.out.println("Invaslid input: ");
+            return 0;
+        }
+        else if (sales<100){
+            commission+=0.2*sales;
+        }
+        else if (sales<5000) {
+            commission+=0.5*sales;
+        }
+        else {
+            commission+=0.8*sales;
+        }
+        return commission;
+    }
+}
