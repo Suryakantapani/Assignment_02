@@ -19,7 +19,7 @@ class Distance{
     }
 }
 
-public class assignment_2 {
+public class HAQ_4 {
     public static void main(String[] args) {
         Distance d1= new Distance(5,90);
         Distance d2= new Distance(3,40);
