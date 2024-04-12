@@ -1,0 +1,57 @@
+class PointType{
+    double x;
+    double y;
+    PointType(double x, double y){
+        this.x=x;
+        this.y=y;
+    }
+    void setCoordinates(double x, double y){
+        this.x=x;
+        this.y=y;
+    }
+    void display(){
+        System.out.println("X-Coordinate: "+x);
+        System.out.println("Y-Coordinate: "+y);
+    }
+}
+class CircleType extends PointType{
+    double radius;
+    CircleType(double x, double y, double radius){
+        super(x,y);
+        this.radius=radius;
+    }
+    void setRadius(double radius){
+        this.radius=radius;
+    }
+    void displayRadius(){
+        System.out.println("Radius: "+radius);
+    }
+    void displayCenter(){
+        System.out.println("Center: "+x+","+y);
+    }
+    double getArea(){
+        return Math.PI*radius*radius;
+    }
+    double getCircumference(){
+        return 2*Math.PI*radius;
+    }
+}
+
+public class HAQ_5{
+    public static void main(String[] args) {
+        CircleType c1= new CircleType(4.0,5.0,2.0);
+        c1.displayCenter();
+
+        c1.setCoordinates(5,6);
+        System.out.println("New center coordinates: ");
+        c1.displayCenter();
+
+        c1.displayRadius();
+        System.out.println("New Radius: ");
+        c1.setRadius(6);
+        c1.displayRadius();
+
+        System.out.println("Area: "+c1.getArea());
+        System.out.println("Circumference: "+c1.getCircumference());
+   }
+}
