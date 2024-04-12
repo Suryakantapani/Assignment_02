@@ -5,7 +5,6 @@ class Bank{
 	double amout;
 	void setbankname(String name){
 		this.Bankname=name;
-	
 	}
 	void setamount(double a){
 		this.amout=a;
@@ -14,27 +13,24 @@ class Bank{
 		System.out.println("bank name is "+Bankname+" net amout of bank is "+amout);
 	}
 }
-public class Haq_03 {
+public class HAQ_03 {
 	public static void main(String[]args) {
 	Scanner sc=new Scanner(System.in);
 	System.out.println("enter the bank details ");
 	Bank b[]=new Bank[2];
 	String x=sc.next();
 	double y=sc.nextDouble();
-	for(int i=0; i<b.length;i++) 
-	{
+	for(int i=0; i<b.length;i++) {
 		b[i]=new Bank();
 		b[i].setbankname(x);
 		b[i].setamount(y);
 		
 	}
-	for(int i=0; i<b.length; i++) 
-	
-	{
+	for(int i=0; i<b.length; i++) {
 		b[i]=new Bank();
-		b[i].show();
-		
+		b[i].show();	
 	}
+}
 		
 	}
 	
