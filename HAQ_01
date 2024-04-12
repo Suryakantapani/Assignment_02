@@ -1,0 +1,32 @@
+package Assignment_02;
+
+class Commission{
+	double sales;
+        double commission;
+	Commission(double sales){
+		this.sales=sales;
+	}
+	void getcommission(){
+                if (sales<0){
+                     System.out.println("Invalid input: ");
+                }
+		else if(sales<100) {
+                     sales=sales-(sales/100)*2;
+		     System.out.println(sales);
+	        }
+		else if(sales>500 && sales<5000) {
+                     sales=sales-(sales/100)*5;
+		     System.out.println(sales);
+		}
+		else {
+		     sales=sales-(sales/100)*8;
+		     System.out.println(sales);
+		}
+     }
+}
+public class HAQ_01 {
+	public static void main(String[]args) {
+	    Commission sc=new Commission(550);
+	    sc.getcommission();
+	}
+}
