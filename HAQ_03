@@ -1,38 +1,60 @@
 package Assignment_02;
 import java.util.Scanner;
 class Bank{
-	String Bankname;
-	double amout;
-	void setbankname(String name){
-		this.Bankname=name;
+	String Bnme;
+	int deposit;
+	static int totalamount;
+	void setBankName(String name){
+		Bnme=name;	
 	}
-	void setamount(double a){
-		this.amout=a;
+	void setAmount(int deposit) {
+		if(deposit>=1000) {
+			this.deposit=deposit;
+			totalamount+=deposit;
+		}
+		else
+			System.out.println("minimum deposit "+deposit);
 	}
-	void show() {
-		System.out.println("bank name is "+Bankname+" net amout of bank is "+amout);
+	void showdata() {
+		System.out.println("Bank name is "+Bnme);
+		System.out.println(" deposit is "+deposit);
 	}
-}
-public class HAQ_03 {
-	public static void main(String[]args) {
-	Scanner sc=new Scanner(System.in);
-	System.out.println("enter the bank details ");
-	Bank b[]=new Bank[2];
-	String x=sc.next();
-	double y=sc.nextDouble();
-	for(int i=0; i<b.length;i++) {
-		b[i]=new Bank();
-		b[i].setbankname(x);
-		b[i].setamount(y);
+	static void totalamount() {
+		System.out.println("total deposit is"+totalamount);
+	}
+	static void minamount(Bank b[]) {
+		String minbank="";
+		int mindepo=Integer.MAX_VALUE;
+		for(int i=0; i<5; i++) {
+			if(b[i].deposit<mindepo) {
+			mindepo=b[i].deposit;
+			minbank=b[i].Bnme;
+			}
+		}
+		System.out.println("Bank where deposit is minimum is "+minbank+" amount is "+mindepo);
+		}
 		
 	}
-	for(int i=0; i<b.length; i++) {
-		
-		b[i].show();	
-	}
-}
-		
-	}
-	
+public class HAQ_3 {
+public static void main(String[]args) { 
+	Bank b[] = new Bank[5];
+    for (int i=0; i<5; i++){
+        b[i]=new Bank();
+    }
+    b[0].setBankName("HDFC");
+    b[0].setAmount(1890);
+    b[1].setBankName("AXIS");
+    b[1].setAmount(900);
+    b[2].setBankName("ICICI");
+    b[2].setAmount(1500);
+    b[3].setBankName("OGB");
+    b[3].setAmount(2390);
+    b[4].setBankName("PNB");
+    b[4].setAmount(6570);
 
-}
+    for (int i=0; i<5; i++){
+        b[i].showdata();
+    }
+    System.out.println("Total amount deposited: "+Bank.totalamount);
+   Bank.minamount(b);
+}}
